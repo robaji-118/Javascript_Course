@@ -52,18 +52,78 @@
 
 ////////////////////////
 
-const measureKelvin = function() {
-    const measurement = {
-        type: 'temp',
-        unit: 'celsius',
-        value: Number(prompt('Degress celcius :')),
-    };
+// const measureKelvin = function() {
+//     const measurement = {
+//         type: 'temp',
+//         unit: 'celsius',
+//         // value: Number(prompt('Degress celcius :')),
+//     };
 
-    console.log(measurement);
-    console.table(measurement);
+//     console.log(measurement);
+//     console.table(measurement);
 
-    const kelvin = measurement.value + 273;
-    return kelvin;
-};
+//     const kelvin = measurement.value + 273;
+//     return kelvin;
+// };
 
-console.log(measureKelvin());
+// console.log(measureKelvin());
+
+// const calcTempAmplitudeBug = function(t1, t2) {
+//     const temps = t1.concat(t2);
+//     console.log(temps);
+
+//     let max = 0;
+//     let min = 0;
+
+//     for (let i = 0; i < temps.length; i++) {
+//         const curTemp = temps[i];
+//         if (typeof curTemp !== 'number') continue;
+//         if (curTemp > max) max = curTemp;
+//         if (curTemp < min) min = curTemp;
+//     }
+
+//     console.log(max, min);
+//     return max - min;
+// };
+
+// const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+// console.log(amplitudeBug);
+
+/////////////////
+// Challenge
+
+// const data1 = [17, 21, 23];
+// const data2 = [12, 5, -5, 0, 4];
+
+// console.log(` ${data1[0]}ºC ... ${data1[1]}ºC ...... ${data1[2]}ºC ....  `);
+// console.log(` ${data2[0]}ºC ... ${data2[1]}ºC ...... ${data2[2]}ºC ....  `);
+
+// const printForecast = function(arr) {
+//     let str = '';
+//     let day = i + 1;
+//     for (let i = 0; i < arr.length; i++) {
+//         str += `${arr[i]}ºC in ${day} days....`;
+//     }
+
+//     console.log(`...` + str);
+// };
+
+// console.log(data1);
+// console.log(data2);
+
+/////////// with AI
+// const printForecast = function(arr) {
+//     let forecastString = '';
+
+//     for (let i = 0; i < arr.length; i++) {
+//         const day = i + 1;
+//         const temperature = arr[i];
+
+//         forecastString += `${temperature}ºC in ${day} days ... `;
+//     }
+
+//     console.log(forecastString.trim());
+// };
+
+// console.log(printForecast([17, 21, 23]));
+// console.log(printForecast([12, 5, -5, 0, 4]));
